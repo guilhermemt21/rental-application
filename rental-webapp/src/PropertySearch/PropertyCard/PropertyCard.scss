@@ -1,0 +1,53 @@
+.property-card {
+  background: white;
+  border: 1px solid #e5e5e5;
+  width: 31%;
+
+  .single-photo {
+    height: 120px;
+    width: 100%;
+    background-color: #e0e0e0;
+    overflow: hidden;
+
+    img.cover {
+      width: 100%;
+    }
+  }
+
+  .property-details {
+    padding: 15px;
+
+    .property-type {
+      font-size: 10px;
+      color: #4d4d4d;
+      font-weight: 400;
+    }
+
+    .property-address {
+      font-size: 14px;
+      font-weight: 600;
+      color: #000;
+    }
+
+    .property-neighbourhood {
+      font-size: 14px;
+      font-weight: 400;
+      color: #000;
+    }
+
+    .property-size {
+      font-size: 10px;
+      color: rgba(0, 0, 0, 0.6);
+    }
+
+    .property-bedrooms {
+      font-size: 10px;
+      color: rgba(0, 0, 0, 0.6);
+    }
+
+    .property-rent-price {
+      color: #007844;
+      font-weight: bold;
+    }
+  }
+}
