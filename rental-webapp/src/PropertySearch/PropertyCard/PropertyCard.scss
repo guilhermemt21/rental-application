@@ -2,12 +2,20 @@
   background: white;
   border: 1px solid #e5e5e5;
   width: 31%;
+  border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  }
 
   .single-photo {
     height: 120px;
     width: 100%;
     background-color: #e0e0e0;
     overflow: hidden;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
 
     img.cover {
       width: 100%;

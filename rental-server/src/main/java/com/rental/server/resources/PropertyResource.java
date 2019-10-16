@@ -32,8 +32,13 @@ public class PropertyResource {
                                               @QueryParam("minLatitude") Double minLatitude,
                                               @QueryParam("maxLatitude") Double maxLatitude,
                                               @QueryParam("minLongitude") Double minLongitude,
-                                              @QueryParam("maxLongitude") Double maxLongitude) {
-        return propertyService.listPaginatedProperties(count, start, minLatitude, maxLatitude, minLongitude, maxLongitude);
+                                              @QueryParam("maxLongitude") Double maxLongitude,
+                                              @QueryParam("minPrice") Double minPrice,
+                                              @QueryParam("maxPrice") Double maxPrice,
+                                              @QueryParam("minSize") Integer minSize,
+                                              @QueryParam("maxSize") Integer maxSize,
+                                              @QueryParam("bedroomsCount") Integer bedroomsCount) {
+        return propertyService.listPaginatedProperties(count, start, minLatitude, maxLatitude, minLongitude, maxLongitude, minPrice, maxPrice, minSize, maxSize, bedroomsCount);
     }
 /*
 

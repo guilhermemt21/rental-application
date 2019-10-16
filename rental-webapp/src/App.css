@@ -82,6 +82,10 @@
   text-align: right;
 }
 
+.inline {
+  display: inline;
+}
+
 body {
   margin: 0;
   background: white;
