@@ -1,5 +1,6 @@
-import React, { Component } from "react";
+import React, {Component} from "react";
 import "./PropertyMapItem.scss";
+import houseIcon from "../../assets/house.png";
 
 export default class PropertyMapItem extends Component {
   render() {
@@ -23,7 +24,7 @@ export default class PropertyMapItem extends Component {
         <div className="property-rent-price margin-top-5">$ {this.props.property.price}</div>
       </div>
     ) : (
-      <div className="property-map-item">{this.props.property.price}</div>
+      <img src={houseIcon} width="20"/>
     );
   }
 }

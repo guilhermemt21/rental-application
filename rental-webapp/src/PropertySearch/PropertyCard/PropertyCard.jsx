@@ -1,5 +1,4 @@
 import React from "react";
-
 import "./PropertyCard.scss";
 
 const PropertyCard = props => (

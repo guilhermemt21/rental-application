@@ -2,6 +2,8 @@ package com.rental.server;
 
 import com.google.inject.Guice;
 import com.google.inject.Injector;
+import com.rental.server.context.PropertySearch;
+import com.rental.server.context.PropertySearchContextFactory;
 import com.rental.server.health.TemplateHealthCheck;
 import com.rental.server.resources.PropertyResource;
 import io.dropwizard.Application;
@@ -11,6 +13,8 @@ import io.dropwizard.migrations.MigrationsBundle;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 import org.eclipse.jetty.servlets.CrossOriginFilter;
+import org.glassfish.hk2.utilities.binding.AbstractBinder;
+import org.glassfish.jersey.process.internal.RequestScoped;
 import org.jdbi.v3.core.Jdbi;
 
 import javax.servlet.DispatcherType;
@@ -46,11 +50,18 @@ public class RentalApplication extends Application<RentalConfiguration> {
         Jdbi applicationJdbi = factory.build(environment, configuration.getApplicationDataSourceFactory(), "applicationDatabase");
 
         Injector injector = Guice.createInjector(new DAODependencyModule(applicationJdbi));
-
         injector.injectMembers(applicationJdbi);
 
         registerHealthChecks(environment);
         registerResources(injector, environment);
+
+        environment.jersey().register(new AbstractBinder() {
+            @Override
+            protected void configure() {
+                bindFactory(PropertySearchContextFactory.class).to(PropertySearch.class).in(RequestScoped.class);
+            }
+        });
+
 
         FilterRegistration.Dynamic cors = environment.servlets()
                 .addFilter("CORSFilter", CrossOriginFilter.class);
