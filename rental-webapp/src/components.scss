@@ -1,0 +1,24 @@
+.button {
+  padding: 5px 15px;
+  border-radius: 10px;
+  font-size: 12px;
+  border: 1px solid #e5e5e5;
+
+  &.active {
+    background: #e5e5e5;
+  }
+
+  &:hover {
+    background: #e5e5e5;
+    cursor: pointer;
+  }
+}
+
+
+.content-holder {
+  padding: 20px;
+  border: 1px solid #e7e7e7;
+  background: white;
+  border-radius: 3px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

@@ -24,7 +24,7 @@ export default class PropertyMapItem extends Component {
         <div className="property-rent-price margin-top-5">$ {this.props.property.price}</div>
       </div>
     ) : (
-      <img src={houseIcon} width="20"/>
+      <img src={houseIcon} width="20" alt=""/>
     );
   }
 }

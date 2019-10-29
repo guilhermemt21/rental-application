@@ -134,7 +134,7 @@ export class PropertySearch extends Component {
     return (
       <div className="property-search">
         <div className="header flex ai-center">
-          <img src={houseIcon} width="40" className="margin-right-30"/>
+          <img src={houseIcon} width="40" className="margin-right-30" alt=""/>
           <h4>Unique Rental Experience</h4>
         </div>
         <div className="properties-content">

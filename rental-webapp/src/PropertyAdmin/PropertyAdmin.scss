@@ -1,0 +1,42 @@
+.property-admin {
+  padding: 20px;
+
+  .property-list {
+    table {
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    th {
+      font-size: 12px;
+      text-align: left;
+    }
+    td {
+      font-size: 12px;
+      text-align: left;
+    }
+  }
+
+  .property-upsert {
+    margin-top: 10px;
+    padding: 10px 0;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+
+    div {
+      font-size: 12px;
+    }
+
+    h5 {
+      margin-bottom: 10px
+    }
+
+    input {
+      margin-top: 10px;
+      border: 1px solid #e5e5e5;
+      border-radius: 5px;
+      padding: 2px 5px;
+      width: 120px;
+    }
+  }
+}

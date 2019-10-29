@@ -57,21 +57,5 @@
         margin: 0 10px 0 10px;
       }
     }
-
-    .button {
-      padding: 5px 15px;
-      border-radius: 10px;
-      font-size: 12px;
-      border: 1px solid #e5e5e5;
-
-      &.active {
-        background: #e5e5e5;
-      }
-
-      &:hover {
-        background: #e5e5e5;
-        cursor: pointer;
-      }
-    }
   }
 }
